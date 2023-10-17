@@ -19,7 +19,7 @@ public class CatService {
         this.repository = repository;
     }
 
-    public Cat create(Cat cat){
+    public Cat createCat(Cat cat){
         repository.save(cat);
         return cat;
     }
@@ -38,5 +38,19 @@ public class CatService {
         return catList;
     }
 
-    
+    public Cat updateCat(Long id, Cat cat){
+        Cat updateThisCat = findCat(id);
+        updateThisCat.setName(cat.getName());
+        updateThisCat.setColor(cat.getColor());
+
+        return createCat(updateThisCat);
+    }
+
+    public Cat deleteCat(Long id){
+        Cat deletedCat = findCat(id);
+        repository.delete(deletedCat);
+        return deletedCat;
+    }
+
+
 }
