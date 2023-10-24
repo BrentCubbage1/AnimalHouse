@@ -94,18 +94,16 @@ function readAll(event) {
             const container = document.querySelector('.cats');
             container.innerHTML = ''; // This should clear whatever is currently inside of the container.
 
+            const catList = document.createElement('ul'); //create list (unordered list = ul)
+
             response.forEach(item => { // function that we run for each item. (is it a lambda in js?)
-            const p = document.createElement('p'); //create an element.
-            p.textContent = "Cat - " + item.name + " (" + item.color + ")"; // Fill it with cat name and color for now, eventually make it a picture of a cat.
-
-            container.appendChild(p); // append (add it) to the container.
-
-            const brk = document.createElement('br');//this makes a line break, then we append the line break to the container as well for a new line.
-            container.appendChild(brk);
-            //after this runs, should replace the default "Cats" with a list of all the cats in the DB.
-
+            const cat = document.createElement('li'); //create an element.
+            cat.textContent = "Cat - " + item.name + " (" + item.color + ")"; // Fill it with cat name and color for now, eventually make it a picture of a cat.
+            catList.appendChild(cat); //append the item into our list.
 
             });
+            //after we're done the whole loop, append the created UL to our page.
+             container.appendChild(catList);
         },
 
         error: function (request, status, error) {
