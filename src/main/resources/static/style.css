@@ -3,11 +3,16 @@ form {
     margin: 20px;
 }
 
-h1 {
-text-align: center;
-margin-right: 50px
+.catcontainer {
+display: flex;
+justify-content: center;
+align-items: center;
 }
 
+.cats{
+display: flex;
+justify-content: center;
+}
 
 input {
     margin: 5px;

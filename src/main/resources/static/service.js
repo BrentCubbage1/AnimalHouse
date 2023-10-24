@@ -90,8 +90,24 @@ function readAll(event) {
         },
         url: "/cat/read",
         success: function (response) {
-            alert(JSON.stringify(response));
+        //Grab the "cats" div I made in index.html
+            const container = document.querySelector('.cats');
+            container.innerHTML = ''; // This should clear whatever is currently inside of the container.
+
+            response.forEach(item => { // function that we run for each item. (is it a lambda in js?)
+            const p = document.createElement('p'); //create an element.
+            p.textContent = "Cat - " + item.name + " (" + item.color + ")"; // Fill it with cat name and color for now, eventually make it a picture of a cat.
+
+            container.appendChild(p); // append (add it) to the container.
+
+            const brk = document.createElement('br');//this makes a line break, then we append the line break to the container as well for a new line.
+            container.appendChild(brk);
+            //after this runs, should replace the default "Cats" with a list of all the cats in the DB.
+
+
+            });
         },
+
         error: function (request, status, error) {
             console.log("Error while digesting request")
             console.log("Request value ↓")
