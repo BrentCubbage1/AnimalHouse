@@ -35,6 +35,7 @@ function create(event) {
         dataType: "JSON",
         success: function (response) {
             alert(JSON.stringify(response));
+            readAll(event);
         },
         error: function (request, status, error) {
             console.log("Error while digesting request")
@@ -148,6 +149,7 @@ function update(event) {
         dataType: "JSON",
         success: function (response) {
             alert(JSON.stringify(response));
+                        readAll(event);
         },
         error: function (request, status, error) {
             console.log("Error while digesting request")
@@ -178,6 +180,7 @@ function deleteById(event) {
         url: "/cat/delete/" + catIdValue,
         success: function (response) {
             alert(JSON.stringify(response));
+                        readAll(event);
         },
         error: function (request, status, error) {
             console.log("Error while digesting request")
