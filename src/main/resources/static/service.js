@@ -101,7 +101,9 @@ function readAll(event) {
 
 
                 const imageName = 'cat.png';
-                catImage.src = imageName; // Set the image source based on the file name
+                catImage.src = imageName;
+                catImage.width = 50;
+                catImage.height = 50;
 
                 // Append the image to the container
                 container.appendChild(catImage);
