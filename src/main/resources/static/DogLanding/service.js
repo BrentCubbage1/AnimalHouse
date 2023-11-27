@@ -1,5 +1,5 @@
-class Cat{
-    constructor(id, name, color){
+class Dog {
+    constructor(id, name, color) {
         this.id = id;
         this.name = name;
         this.color = color;
@@ -9,18 +9,18 @@ class Cat{
 function create(event) {
     event.preventDefault();
     // get the values that are in the input fields
-    const catIdElement = document.getElementById("cat-id");
+    const dogIdElement = document.getElementById("dog-id");
     const nameElement = document.getElementById("name");
     const colorElement = document.getElementById("color");
 
-    const catIdValue = catIdElement.value;
+    const dogIdValue = dogIdElement.value;
     const name = nameElement.value;
     const color = colorElement.value;
-    const cat = new Cat(catIdValue, name, color);
+    const dog = new Dog(dogIdValue, name, color);
 
     // call the create function of the spring boot app with the values
-    const catData = JSON.stringify(cat);
-    console.log(catData);
+    const dogData = JSON.stringify(dog);
+    console.log(dogData);
 
     $.ajax({
         type: "POST",
@@ -30,8 +30,8 @@ function create(event) {
             'Content-Type': 'application/json',
             'Access-Control-Allow-Origin': '*'
         },
-        url: "/cat/create",
-        data: catData,
+        url: "/dog/create",
+        data: dogData,
         dataType: "JSON",
         success: function (response) {
             alert(JSON.stringify(response));
@@ -51,8 +51,8 @@ function create(event) {
 function read(event) {
     event.preventDefault();
     // get the values that are in the input fields
-    const catIdElement = document.getElementById("cat-id");
-    const catIdValue = catIdElement.value;
+    const dogIdElement = document.getElementById("dog-id");
+    const dogIdValue = dogIdElement.value;
 
     $.ajax({
         type: "GET",
@@ -62,7 +62,7 @@ function read(event) {
             'Content-Type': 'application/json',
             'Access-Control-Allow-Origin': '*'
         },
-        url: "/cat/read/" + catIdValue,
+        url: "/dog/read/" + dogIdValue,
         success: function (response) {
             alert(JSON.stringify(response));
         },
@@ -88,7 +88,7 @@ function readAll(event) {
             'Content-Type': 'application/json',
             'Access-Control-Allow-Origin': '*'
         },
-        url: "/cat/read",
+        url: "/dog/read",
         success: function (response) {
             alert(JSON.stringify(response));
         },
@@ -104,22 +104,21 @@ function readAll(event) {
     });
 }
 
-
 function update(event) {
-      event.preventDefault();
-        // get the values that are in the input fields
-        const catIdElement = document.getElementById("cat-id");
-        const nameElement = document.getElementById("name");
-        const colorElement = document.getElementById("color");
+    event.preventDefault();
+    // get the values that are in the input fields
+    const dogIdElement = document.getElementById("dog-id");
+    const nameElement = document.getElementById("name");
+    const colorElement = document.getElementById("color");
 
-        const catIdValue = catIdElement.value;
-        const name = nameElement.value;
-        const color = colorElement.value;
-        const cat = new Cat(catIdValue, name, color);
+    const dogIdValue = dogIdElement.value;
+    const name = nameElement.value;
+    const color = colorElement.value;
+    const dog = new Dog(dogIdValue, name, color);
 
-        // call the create function of the spring boot app with the values
-        const catData = JSON.stringify(cat);
-        console.log(catData);
+    // call the create function of the spring boot app with the values
+    const dogData = JSON.stringify(dog);
+    console.log(dogData);
 
     $.ajax({
         type: "PUT",
@@ -129,8 +128,8 @@ function update(event) {
             'Content-Type': 'application/json',
             'Access-Control-Allow-Origin': '*'
         },
-        url: "/cat/update/" + catIdValue,
-        data: catData,
+        url: "/dog/update/" + dogIdValue,
+        data: dogData,
         dataType: "JSON",
         success: function (response) {
             alert(JSON.stringify(response));
@@ -149,9 +148,9 @@ function update(event) {
 
 function deleteById(event) {
     event.preventDefault();
-       // get the values that are in the input fields
-       const catIdElement = document.getElementById("cat-id");
-       const catIdValue = catIdElement.value;
+    // get the values that are in the input fields
+    const dogIdElement = document.getElementById("dog-id");
+    const dogIdValue = dogIdElement.value;
 
     $.ajax({
         type: "DELETE",
@@ -161,7 +160,7 @@ function deleteById(event) {
             'Content-Type': 'application/json',
             'Access-Control-Allow-Origin': '*'
         },
-        url: "/cat/delete/" + catIdValue,
+        url: "/dog/delete/" + dogIdValue,
         success: function (response) {
             alert(JSON.stringify(response));
         },
