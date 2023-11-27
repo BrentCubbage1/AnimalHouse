@@ -104,6 +104,7 @@ function readAll(event) {
                 catImage.src = imageName;
                 catImage.width = 50;
                 catImage.height = 50;
+                catImage.style.margin = '10px';
 
                 // Append the image to the container
                 container.appendChild(catImage);
