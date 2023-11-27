@@ -35,7 +35,7 @@ function create(event) {
         dataType: "JSON",
         success: function (response) {
             alert(JSON.stringify(response));
-            readAll(event);
+//            readAll(event);
         },
         error: function (request, status, error) {
             console.log("Error while digesting request")
@@ -91,22 +91,22 @@ function readAll(event) {
         },
         url: "/cat/read",
         success: function (response) {
-        //Grab the "cats" div I made in index.html
+            // Grab the "cats" div I made in index.html
             const container = document.querySelector('.cats');
             container.innerHTML = ''; // This should clear whatever is currently inside of the container.
 
-            const catList = document.createElement('ul'); //create list (unordered list = ul)
+            response.forEach(item => {
+                // Create an image element
+                const catImage = document.createElement('img');
 
-            response.forEach(item => { // function that we run for each item. (is it a lambda in js?)
-            const cat = document.createElement('li'); //create an element.
-            cat.textContent = "Cat - " + item.name + " (" + item.color + ")"; // Fill it with cat name and color for now, eventually make it a picture of a cat.
-            catList.appendChild(cat); //append the item into our list.
 
+                const imageName = 'cat.png';
+                catImage.src = imageName; // Set the image source based on the file name
+
+                // Append the image to the container
+                container.appendChild(catImage);
             });
-            //after we're done the whole loop, append the created UL to our page.
-             container.appendChild(catList);
         },
-
         error: function (request, status, error) {
             console.log("Error while digesting request")
             console.log("Request value ↓")
@@ -118,6 +118,7 @@ function readAll(event) {
         }
     });
 }
+
 
 
 function update(event) {
