@@ -1,16 +1,20 @@
-<link rel="stylesheet" href="./style.css">
-<script src="./service.js"></script>
-<script
-        src="https://code.jquery.com/jquery-3.4.1.js"
-        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-        crossorigin="anonymous"></script>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./service.js"></script>
+    <script
+            src="https://code.jquery.com/jquery-3.4.1.js"
+            integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+            crossorigin="anonymous"></script>
+    <script src="./cat.js" defer></script>
+</head>
 <body>
 <div class="catcontainer">
     <h1> CatHouse</h1>
-
 </div>
-
 
 <form>
     <input id="cat-id"> - CatId</br>
@@ -23,14 +27,13 @@
     <button onClick="deleteById(event)">Delete</button>
 </form>
 
-
 <button>
     <a href="/DogLanding/index.html" style="color: white; text-decoration: none;">Or click here for the Dog house</a>
 </button>
 
-
-<div class="cats">
-    <h1> Cats</h1>
-
+<!-- Container for cat animation -->
+<div class="cats-container">
+    <canvas id="catCanvas" width="800" height="600"></canvas>
 </div>
 </body>
+</html>

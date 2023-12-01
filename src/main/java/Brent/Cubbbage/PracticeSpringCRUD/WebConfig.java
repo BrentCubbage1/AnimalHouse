@@ -16,5 +16,5 @@
 
 /** I made a WebConfig class because I thought my app would not serve out of
  * the DogLanding since it was not directly in resources/static.
- * Turns out my .js file was just incorrect and this is not needed. 
+ * Turns out my .js file was just incorrect and this is not needed.
  */
