@@ -92,7 +92,7 @@ function readAll(event) {
         url: "/cat/read",
         success: function (response) {
             // Grab the "cats" div I made in index.html
-            const container = document.querySelector('.cats');
+            const container = document.querySelector('.catCanvas');
             container.innerHTML = ''; // This should clear whatever is currently inside of the container.
 
             response.forEach(item => {
