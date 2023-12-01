@@ -90,35 +90,18 @@ function readAll(event) {
             'Access-Control-Allow-Origin': '*'
         },
         url: "/cat/read",
-        success: function (response) {
-            // Grab the "cats" div I made in index.html
-            const container = document.querySelector('.catCanvas');
-            container.innerHTML = ''; // This should clear whatever is currently inside of the container.
-
-            response.forEach(item => {
-                // Create an image element
-                const catImage = document.createElement('img');
-
-
-                const imageName = 'cat.png';
-                catImage.src = imageName;
-                catImage.width = 50;
-                catImage.height = 50;
-                catImage.style.margin = '10px';
-
-                // Append the image to the container
-                container.appendChild(catImage);
-            });
-        },
-        error: function (request, status, error) {
-            console.log("Error while digesting request")
-            console.log("Request value ↓")
-            console.log(request)
-            console.log("Status value ↓")
-            console.log(status);
-            console.log("Error value ↓")
-            console.log(error);
-        }
+         success: function (response) {
+                    alert(JSON.stringify(response));
+                },
+                error: function (request, status, error) {
+                    console.log("Error while digesting request")
+                    console.log("Request value ↓")
+                    console.log(request)
+                    console.log("Status value ↓")
+                    console.log(status);
+                    console.log("Error value ↓")
+                    console.log(error);
+                }
     });
 }
 
