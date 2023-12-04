@@ -9,6 +9,11 @@ form {
     margin: 20px;
 }
 
+.dogContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 input {
     margin: 5px;
@@ -34,4 +39,12 @@ button:hover {
 
 br {
     line-height: 10px;
+}
+
+.dogs-container {
+    position: relative;
+}
+
+canvas {
+    display: block;
 }

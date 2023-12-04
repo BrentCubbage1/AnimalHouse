@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //On button click, we...
    startMovementButton.addEventListener('click', function () {
 
-      //Similar to the readAll, we GET the cats from the server using our API call.
+      //Similar to the readAll, we GET the cats from the DB using our API call.
            $.ajax({
                type: "GET",
                crossDomain: true,
