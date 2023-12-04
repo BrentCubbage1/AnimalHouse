@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                   dog.x += dog.speedX * -1;
                   dog.y += dog.speedY * -1;
-   
+
                   // Bounce off walls
                   if (dog.x < 0 || dog.x + 50 > canvas.width) {
                       dog.speedX *= -1;
