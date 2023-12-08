@@ -11,6 +11,7 @@ Get names of pets above the sprites of them.
     - Done, needs to be centered.
 
 "fight" implementation (if cat sprite runs into dog sprite, 50/50 remove one from the animation)
+    - Detects collision for any animal running into another, but errors out on collision.
 
 Find better sprites to replace placeholder.
 
