@@ -48,7 +48,7 @@ public class CatController {
     }
 
     @DeleteMapping(value = "/delete/{id}")
-    public ResponseEntity<Cat> deleteCate(@PathVariable Long id){
+    public ResponseEntity<Cat> deleteCat(@PathVariable Long id){
         Cat deletedCat = service.deleteCat(id);
         return ResponseEntity.status(HttpStatus.OK).body(deletedCat);
     }

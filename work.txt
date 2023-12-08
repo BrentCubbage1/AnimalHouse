@@ -1,0 +1,16 @@
+Current tasks:
+
+
+Pre-generated objects in Database on app start (No current persistence as it is not hosted)
+
+Let out cats should let out cats and dogs.
+
+Get names of pets above the sprites of them.
+
+"fight" implementation (if cat sprite runs into dog sprite, 50/50 remove one from the animation)
+
+Find better sprites to replace placeholder.
+
+Fix formatting so box is all on screen.
+
+General prettification.

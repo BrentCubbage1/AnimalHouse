@@ -92,6 +92,7 @@ function readAll(event) {
         url: "/cat/read",
          success: function (response) {
                     alert(JSON.stringify(response));
+                    console.log(response);
                 },
                 error: function (request, status, error) {
                     console.log("Error while digesting request")
