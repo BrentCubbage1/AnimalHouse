@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         speedX: (Math.random() - 0.5) * 2,
                         speedY: (Math.random() - 0.5) * 2,
                         image: new Image(),
+                        name: catData.name,
                     };
                 });
 
@@ -31,6 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         speedX: (Math.random() - 0.5) * 2,
                         speedY: (Math.random() - 0.5) * 2,
                         image: new Image(),
+                        name: dogData.name,
                     };
                 });
 
@@ -74,6 +76,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
             animal.image.src = 'cat.png';
             context.drawImage(animal.image, animal.x, animal.y, 50, 50);
+
+            //This part grabs takes the name of the animal and places it on top of the picture.
+            context.font = "12px Arial";
+            context.fillStyle = "#ffffff";
+            context.fillText(animal.name, animal.x, animal.y - 5);
 
             animal.x += animal.speedX;
             animal.y += animal.speedY;

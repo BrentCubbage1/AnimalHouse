@@ -8,6 +8,7 @@ Let out cats should let out cats and dogs.
     - Placeholder implementation has been implemented, both generate. Still using cat picture for cat and dog.
 
 Get names of pets above the sprites of them.
+    - Done, needs to be centered.
 
 "fight" implementation (if cat sprite runs into dog sprite, 50/50 remove one from the animation)
 
