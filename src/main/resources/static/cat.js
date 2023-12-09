@@ -100,9 +100,9 @@ document.addEventListener('DOMContentLoaded', function () {
               if (animal !== otherAnimal && checkCollision(animal, otherAnimal)) {
                   // 50/50 chance to remove either animal
                   if (Math.random() < 0.5) {
-                      removeAnimal(animal);
+                      removeAnimal(catImages, animal);
                   } else {
-                      removeAnimal(otherAnimal);
+                      removeAnimal(catImages, otherAnimal);
                   }
               }
           });
@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', function () {
         );
     }
 
-    function removeAnimal(animal) {
+    function removeAnimal(catImages, animal) {
         const index = catImages.indexOf(animal);
         if (index !== -1) {
             catImages.splice(index, 1);

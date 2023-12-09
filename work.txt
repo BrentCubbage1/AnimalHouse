@@ -18,3 +18,6 @@ Find better sprites to replace placeholder.
 Fix formatting so box is all on screen.
 
 General prettification.
+
+Reformatting
+    -reformatted model to have an animal superclass as cat and dog were repeat code.

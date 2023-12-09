@@ -49,10 +49,16 @@ br {
 }
 
 .cats-container {
-    position: relative;
-
+    text-align: center;
+    margin-top: 5px;
+    width: 100vw; /* v is viewport */
+    height: 95vh;
+    overflow: hidden;
 }
 
 canvas {
     display: block;
+    margin: 0 auto;
+    border: 1px solid white;
+
 }
